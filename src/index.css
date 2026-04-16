@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(3px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes navbarEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes organicFloat {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate3d(0, -10px, 0) rotate(1.8deg);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
+
+@keyframes organicFloatReverse {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate3d(0, 8px, 0) rotate(-1.6deg);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .navbar-enter {
+    animation: navbarEnter 420ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+
+  .navbar-brand,
+  .navbar-cta,
+  .nav-link-elegant {
+    transition: transform 240ms ease, opacity 240ms ease, color 240ms ease;
+  }
+
+  .navbar-brand:hover,
+  .navbar-cta:hover {
+    transform: translateY(-1px);
+  }
+
+  main h1,
+  main h2,
+  main h3,
+  main h4,
+  main p,
+  main .font-label,
+  main .font-body {
+    animation: textReveal 620ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+
+  main h1 {
+    animation-delay: 40ms;
+  }
+
+  main h2 {
+    animation-delay: 70ms;
+  }
+
+  main h3 {
+    animation-delay: 90ms;
+  }
+
+  main p,
+  main .font-body {
+    animation-delay: 110ms;
+  }
+
+  main .font-label {
+    animation-delay: 60ms;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-headline {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+}
+
+.font-label {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+}
+
+.font-body {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+}
+
+code {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+::selection {
+  background-color: #52284e;
+  color: #ffffff;
+}
+
+/* Material Symbols Outlined */
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 300,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+/* Custom shapes and utilities */
+.lotus-mask {
+  clip-path: path(
+    "M50 0 C70 20 100 30 100 50 C100 70 70 80 50 100 C30 80 0 70 0 50 C0 30 30 20 50 0"
+  );
+}
+
+.organic-shape-1 {
+  border-radius: 63% 37% 30% 70% / 50% 45% 55% 50%;
+}
+
+.editorial-line {
+  height: 1px;
+  background-color: #d1c2cb;
+  opacity: 0.4;
+}
+
+.text-balanced {
+  text-wrap: balance;
+}
+
+.organic-float-slow {
+  animation: organicFloat 11s ease-in-out infinite;
+}
+
+.organic-float-reverse {
+  animation: organicFloatReverse 13s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .organic-float-slow,
+  .organic-float-reverse {
+    animation: none;
+  }
+}
+
+/* Contact Form Styling */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  outline: none;
+  box-shadow: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #52284e;
+  outline-offset: 3px;
+}
+
+.skip-link:focus-visible {
+  outline: 2px solid #fff8f7;
+  outline-offset: 2px;
+}
