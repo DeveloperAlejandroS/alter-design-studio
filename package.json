@@ -2,6 +2,7 @@
   "name": "alter-design-studio",
   "private": true,
   "version": "0.0.1",
+  "author": "DeveloperAlejandroS",
   "type": "module",
   "scripts": {
     "dev": "vite",
