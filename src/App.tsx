@@ -1,59 +1,58 @@
-import { useEffect } from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom'
-import { AnimatePresence, motion } from 'framer-motion'
-import '../src/index.css'
-import Home from './pages/Home'
-import Estudio from './pages/Estudio'
-import Equipo from './pages/Equipo'
-import Contacto from './pages/Contacto'
-import FixedNavbar from './components/FixedNavbar'
-import FixedFooter from './components/FixedFooter'
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import Home from "./pages/Home";
+import Estudio from "./pages/Estudio";
+import Equipo from "./pages/Equipo";
+import Contacto from "./pages/Contacto";
+import FixedNavbar from "./components/FixedNavbar";
+import FixedFooter from "./components/FixedFooter";
 
 function App() {
-  const location = useLocation()
+  const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [location.pathname])
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location.pathname]);
 
   useEffect(() => {
     const pageMeta: Record<string, { title: string; description: string }> = {
-      '/': {
-        title: 'ALTER Studio | Inicio',
+      "/": {
+        title: "ALTER Studio | Inicio",
         description:
-          'Diseño estratégico, narrativa de marca y dirección creativa para transformar la identidad visual de marcas contemporáneas.',
+          "Diseño estratégico, narrativa de marca y dirección creativa para transformar la identidad visual de marcas contemporáneas.",
       },
-      '/estudio': {
-        title: 'ALTER Studio | Estudio',
+      "/estudio": {
+        title: "ALTER Studio | Estudio",
         description:
-          'Conoce el manifiesto de ALTER Studio: intención, coherencia y transformación aplicadas al diseño de marca.',
+          "Conoce el manifiesto de ALTER Studio: intención, coherencia y transformación aplicadas al diseño de marca.",
       },
-      '/equipo': {
-        title: 'ALTER Studio | Nosotras',
+      "/equipo": {
+        title: "ALTER Studio | Nosotras",
         description:
-          'Descubre la visión y especialidades del equipo de ALTER Studio en estrategia, identidad visual y curaduría creativa.',
+          "Descubre la visión y especialidades del equipo de ALTER Studio en estrategia, identidad visual y curaduría creativa.",
       },
-      '/contacto': {
-        title: 'ALTER Studio | Contacto',
+      "/contacto": {
+        title: "ALTER Studio | Contacto",
         description:
-          'Solicita una consultoría de marca con ALTER Studio. Conversemos sobre identidad visual, dirección creativa y crecimiento digital.',
+          "Solicita una consultoría de marca con ALTER Studio. Conversemos sobre identidad visual, dirección creativa y crecimiento digital.",
       },
-    }
+    };
 
     const fallback = {
-      title: 'ALTER Studio | Diseño, Identidad y Dirección Creativa',
+      title: "ALTER Studio | Diseño, Identidad y Dirección Creativa",
       description:
-        'ALTER Studio crea experiencias visuales y estratégicas para marcas que buscan evolucionar con coherencia.',
-    }
+        "ALTER Studio crea experiencias visuales y estratégicas para marcas que buscan evolucionar con coherencia.",
+    };
 
-    const meta = pageMeta[location.pathname] ?? fallback
-    document.title = meta.title
+    const meta = pageMeta[location.pathname] ?? fallback;
+    document.title = meta.title;
 
-    const descriptionTag = document.querySelector('meta[name="description"]')
+    const descriptionTag = document.querySelector('meta[name="description"]');
     if (descriptionTag) {
-      descriptionTag.setAttribute('content', meta.description)
+      descriptionTag.setAttribute("content", meta.description);
     }
-  }, [location.pathname])
+  }, [location.pathname]);
 
   return (
     <>
@@ -68,9 +67,9 @@ function App() {
         <motion.div
           tabIndex={-1}
           key={location.pathname}
-          initial={{ opacity: 0, y: 14, filter: 'blur(4px)' }}
-          animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-          exit={{ opacity: 0, y: -10, filter: 'blur(4px)' }}
+          initial={{ opacity: 0, y: 14, filter: "blur(4px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          exit={{ opacity: 0, y: -10, filter: "blur(4px)" }}
           transition={{ duration: 0.48, ease: [0.2, 0.8, 0.2, 1] }}
         >
           <Routes location={location}>
@@ -83,7 +82,7 @@ function App() {
       </AnimatePresence>
       <FixedFooter />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
