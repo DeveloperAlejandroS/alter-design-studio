@@ -56,20 +56,20 @@ export default function FixedNavbar() {
         </div>
         <button
           type="button"
-          className="md:hidden inline-flex items-center justify-center w-10 h-10 border border-[#d1c2cb]/50 text-[#3a1237]"
+          className="group md:hidden inline-flex items-center justify-center w-10 h-10 border border-[#d1c2cb]/50 text-[#3a1237] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(58,18,55,0.08)]"
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
           aria-label={isMenuOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'}
           onClick={() => setIsMenuOpen((prev) => !prev)}
         >
-          <span className="material-symbols-outlined text-[20px]">
+          <span className="material-symbols-outlined text-[20px] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
             {isMenuOpen ? 'close' : 'menu'}
           </span>
         </button>
         <a
           href="/brandbook.pdf"
           download
-          className="hidden md:inline-block bg-primary text-on-primary px-6 py-3 font-label text-xs tracking-widest uppercase hover:bg-primary-container transition-colors duration-300 navbar-cta"
+          className="hidden md:inline-block bg-primary text-on-primary px-6 py-3 font-label text-xs tracking-widest uppercase hover:bg-primary-container transition-all duration-300 navbar-cta hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(58,18,55,0.18)]"
         >
           Brandbook
         </a>
@@ -78,13 +78,13 @@ export default function FixedNavbar() {
         <div id="mobile-navigation" className="md:hidden border-t border-[#d1c2cb]/40 px-4 sm:px-6 pb-5 pt-4 bg-[#fff8f7]/95">
           <MainNavLinks
             className="flex flex-col gap-4"
-            itemClassName="text-base"
+            itemClassName="text-base transition-transform duration-300 hover:translate-x-1"
             onNavigate={() => setIsMenuOpen(false)}
           />
           <a
             href="/brandbook.pdf"
             download
-            className="mt-5 inline-block bg-primary text-on-primary px-5 py-3 font-label text-[11px] tracking-widest uppercase hover:bg-primary-container transition-colors duration-300"
+            className="mt-5 inline-block bg-primary text-on-primary px-5 py-3 font-label text-[11px] tracking-widest uppercase hover:bg-primary-container transition-all duration-300 hover:-translate-y-0.5"
           >
             Brandbook
           </a>

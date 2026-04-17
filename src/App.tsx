@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import './App.css'
+import '../src/index.css'
 import Home from './pages/Home'
 import Estudio from './pages/Estudio'
 import Equipo from './pages/Equipo'

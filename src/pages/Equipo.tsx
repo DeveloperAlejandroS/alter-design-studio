@@ -1,4 +1,5 @@
 import OrganicShape from '../components/OrganicShape'
+import iconLight from "../assets/icon_light_no_bg.png";
 
 export default function Equipo() {
   return (
@@ -126,7 +127,11 @@ export default function Equipo() {
               <div className="flex justify-center">
                 <div className="w-44 h-44 md:w-64 md:h-64 border border-on-primary/20 flex items-center justify-center transform rotate-45">
                   <div className="w-full h-full border border-on-primary/20 transform -rotate-12 flex items-center justify-center">
-                    <span className="material-symbols-outlined text-5xl md:text-7xl font-thin -rotate-[33deg]" style={{ fontVariationSettings: "'wght' 100" }}>all_inclusive</span>
+                    <img
+                      src={iconLight}
+                      alt="ALTER Studio"
+                      className="w-14 h-14 md:w-20 md:h-20 object-contain -rotate-[33deg]"
+                    />
                   </div>
                 </div>
               </div>

@@ -1,4 +1,7 @@
 import OrganicShape from '../components/OrganicShape'
+import banner1 from "../assets/Banner 1.png";
+import banner2 from "../assets/Banner 2.png";
+import content4 from "../assets/content (4).png";
 
 export default function Estudio() {
   return (
@@ -40,9 +43,9 @@ export default function Estudio() {
                 </p>
                 <div className="mt-12 w-24 h-px bg-primary"></div>
               </div>
-              <div className="md:mt-64">
-                <div className="mb-12 overflow-hidden">
-                  <img className="w-full grayscale brightness-90 hover:scale-105 transition-transform duration-700 aspect-[4/5] object-cover" data-alt="Minimalist architectural detail showing light and shadow on a clean concrete wall with sharp geometric lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsnsQB52R6rJO24IO442GLaTrC5QJc25lqEVl17htPOKn4vBWvoau2KAdQx7lGp5RP8nW5fF37WkqaqYxkzsbobSpuJfjrWAYUVwccjHRnn4gQxNXK_BFqkpnQC9Fcfv6WWfty6GIGr9gEN1KK9MI3eiPMTu-wWxe-Vh3MLpw1T_l9r8FV6jBfHRBUuotiZyiml_9KzL6bqe0fNKyr25TMZJAw_nVtNjcNNmVptYE59HiYPu_AbUKs4YGh21I27Bn2VB4_NVP0JUu-"/>
+              <div className="group md:mt-64">
+                <div className="mb-12 overflow-hidden transition-all duration-700 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(58,18,55,0.08)]">
+                  <img className="w-full brightness-90 transition-transform duration-700 aspect-[4/5] object-cover group-hover:scale-110" data-alt="Minimalist architectural detail showing light and shadow on a clean concrete wall with sharp geometric lines" src={content4}/>
                 </div>
                 <h2 className="text-4xl md:text-6xl font-bold font-headline mb-6 md:mb-8 tracking-tight text-right">Coherencia</h2>
                 <p className="text-xl font-light leading-relaxed max-w-md ml-auto text-right">
@@ -61,8 +64,8 @@ export default function Estudio() {
                 <p className="text-xl font-light leading-relaxed mb-12">
                   Entendemos el diseño como un laboratorio de ideas. Cuestionamos lo establecido para encontrar soluciones que desafíen la convención.
                 </p>
-                <div className="lotus-mask overflow-hidden aspect-square bg-primary-container">
-                  <img className="w-full h-full object-cover mix-blend-soft-light opacity-80" data-alt="Abstract fluid shapes in shades of deep purple and cream, resembling organic lotus petals in motion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO8MUpb7RvPzE9qvZjLVh0nVsZZ4sRiJ9PdQ78FKohDZ6QfrOtdY4ck8WEWEYkJfloF11xkeVruK37ltG-qvL-NGI3Ma7292cCb8WGk6MpmoXyYVp-3CV8_4tJxTfxd7xCc9GPd9ljCol6OJPF3iaQnQBatAHZdnusOpPmiazOwQCIgRJaWlP-__qzjhGzk0TXGgSaUy2Ekf3qQwSEqfUz1PA9zbnVtMx-0GqdnLC2i6rYkEweadN8O8_IFbpKpKV4kRA8c_HrrRwj"/>
+                <div className="group lotus-mask overflow-hidden aspect-square bg-primary-container transition-all duration-700 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(58,18,55,0.08)]">
+                  <img className="w-full h-full object-cover mix-blend-soft-light opacity-80 transition-transform duration-700 group-hover:scale-110" data-alt="Abstract fluid shapes in shades of deep purple and cream, resembling organic lotus petals in motion" src={banner1}/>
                 </div>
               </div>
               <div className="md:col-span-2 hidden md:flex justify-center order-2">
@@ -83,7 +86,7 @@ export default function Estudio() {
 
             {/* Sensibilidad & Autenticidad */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
-              <div className="bg-primary text-surface p-8 md:p-16 h-full flex flex-col justify-between">
+              <div className="bg-primary text-surface p-8 md:p-16 h-full flex flex-col justify-between transition-transform duration-500 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(58,18,55,0.08)]">
                 <div>
                   <h2 className="text-4xl md:text-7xl font-bold font-headline mb-8 md:mb-12 leading-[0.9]">Sensibilidad</h2>
                   <p className="text-xl md:text-2xl font-light leading-relaxed opacity-80">
@@ -94,18 +97,18 @@ export default function Estudio() {
                   <span className="material-symbols-outlined text-4xl">auto_awesome</span>
                 </div>
               </div>
-              <div className="p-8 md:p-16 border border-outline-variant h-full">
+              <div className="p-8 md:p-16 border border-outline-variant h-full transition-transform duration-500 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(58,18,55,0.06)]">
                 <span className="font-label text-xs tracking-widest uppercase mb-12 block opacity-60">The Core Pillar</span>
                 <h2 className="text-4xl md:text-7xl font-bold font-headline mb-8 md:mb-12 text-primary leading-[0.9]">Autenticidad</h2>
                 <p className="text-lg md:text-xl font-light leading-relaxed text-on-surface-variant mb-8 md:mb-12">
                   En un mundo de imitaciones, la verdad es el mayor lujo. Ayudamos a las marcas a encontrar su voz única y a proyectarla con orgullo editorial.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mt-12">
-                  <div className="aspect-video bg-surface-dim overflow-hidden">
-                    <img className="w-full h-full object-cover grayscale" data-alt="Satellite imagery of earth at night showing interconnected city lights like neural networks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBovd0M9XB9PBYclOl5fobL4Llx9Y-FhBn9JxxvXj7nQo8_wE9fDLDk27gcwYrgME6ErR4cLMzHLAP5s84rQyNtyXPQwG3EucX8LpanLXknqVHrxKNq3UgdFQlNVWRBDxWyKemqB_hszV4ZHdXyWqeyh7HepMCX0RSQj1BjBYH0d2ElFlDwcvfzpNCAH3Mzv5NGQXCBvbOXbG-sLfQXTibeC1w-BEYh-AXY0sl5NGmVgavjTX_gy1_5yplijOYJJlwfshInSFfLRda"/>
+                  <div className="group aspect-video bg-surface-dim overflow-hidden transition-all duration-700 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(58,18,55,0.08)]">
+                    <img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Satellite imagery of earth at night showing interconnected city lights like neural networks" src={banner2}/>
                   </div>
-                  <div className="aspect-video bg-surface-dim overflow-hidden">
-                    <img className="w-full h-full object-cover grayscale" data-alt="Wide mountain landscape in soft misty light with minimalist composition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg8bDtYCV0IVw8xh2ROhaoDWadIa3YyJ6pj-BUAdrY0NTxfvv0J4Hp2-0h1oa-JvOTvrA9GHuX3vUIa30tLhv7ojWYLYyeXNLIu4xy3vpdU_vkmIsu1j0FDLsDmyXTD5ao5gnwKdU4paqIYw4jmt6tPsfr7_tbmT8HO-DMQ_jw2XsDdCooBsD8ry1zT3aZII7yCNFNTvCyJV8VeQc2GJOgraU15PEA-MMV-G8LoZ9_8KJBAOZms-lgBPZTfONn0RcZPL2PhYXwELIV"/>
+                  <div className="group aspect-video bg-surface-dim overflow-hidden transition-all duration-700 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(58,18,55,0.08)]">
+                    <img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Wide mountain landscape in soft misty light with minimalist composition" src={content4}/>
                   </div>
                 </div>
               </div>
@@ -119,7 +122,7 @@ export default function Estudio() {
             ¿Listo para elevar la narrativa visual de su marca?
           </h3>
           <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-            <button className="bg-primary text-surface px-12 py-5 font-serif text-xl font-bold uppercase tracking-widest hover:bg-primary-container transition-all">
+            <button className="bg-primary text-surface px-12 py-5 font-serif text-xl font-bold uppercase tracking-widest hover:bg-primary-container transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(58,18,55,0.15)]">
               Iniciar Proyecto
             </button>
           </div>

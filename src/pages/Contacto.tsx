@@ -1,3 +1,5 @@
+import content4 from "../assets/content (4).png";
+
 export default function Contacto() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -68,17 +70,17 @@ export default function Contacto() {
                 <textarea className="w-full bg-transparent border-none py-4 px-0 focus:ring-0 outline-none font-body text-lg md:text-xl placeholder:text-primary/10 resize-none border-b border-outline-variant/30" placeholder="Describa su visión..." rows={4} name="message" required></textarea>
                 <div className="absolute bottom-0 left-0 h-[1px] w-0 bg-primary group-focus-within:w-full transition-all duration-500"></div>
               </div>
-              <button className="group flex items-center gap-3 md:gap-4 text-primary font-serif font-bold text-xl md:text-2xl uppercase tracking-tighter" type="submit">
+              <button className="group flex items-center gap-3 md:gap-4 text-primary font-serif font-bold text-xl md:text-2xl uppercase tracking-tighter transition-all duration-300 hover:-translate-y-1 hover:tracking-[0.12em]" type="submit">
                 <span>Enviar Solicitud</span>
-                <span className="material-symbols-outlined text-4xl group-hover:translate-x-4 transition-transform duration-300">arrow_right_alt</span>
+                <span className="material-symbols-outlined text-4xl transition-transform duration-300 group-hover:translate-x-4 group-hover:rotate-[-8deg]">arrow_right_alt</span>
               </button>
             </form>
           </section>
 
           {/* Right Column: Information & Visuals */}
           <aside className="lg:col-span-5 space-y-14 md:space-y-24">
-            <div className="aspect-[4/5] bg-surface-dim relative overflow-hidden group">
-              <img className="w-full h-full object-cover grayscale opacity-80 group-hover:scale-105 transition-transform duration-1000" data-alt="Modern architectural interior of a minimalist design studio with soft shadows, concrete walls, and a single elegant plant in the corner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeaJ-1HCK3PiFfBFosmKkAGe72JvrCb4NnGclG2WdM4v2tOvhQv2ytDIXCSx-HkJDsqRPn_tNP3Pa8xPA-BzFSadL4woNHysu3pG7pl4sj7U6wsqNjnlBW_BrEbI9c_7qzdiaQasCXS32lRVwKExqG_bf-s9k7Lb0lBCtFy0oRmmuK8W4EwInCPcgDJfvHYy4eM4vaO_c82DQSXAwKRHDispxWdc2ELHZvsvcpEyiQkpzxKnSGdIDBsfE0bK8Pt00hO2qEK3PHrzud" />
+            <div className="group aspect-[4/5] bg-surface-dim relative overflow-hidden transition-all duration-700 hover:-translate-y-1 hover:shadow-[0_24px_50px_rgba(58,18,55,0.12)]">
+              <img className="w-full h-full object-cover opacity-80 transition-transform duration-1000 group-hover:scale-110" data-alt="Modern architectural interior of a minimalist design studio with soft shadows, concrete walls, and a single elegant plant in the corner" src={content4} />
               <div className="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
             </div>
             <div className="grid grid-cols-1 gap-8 border-t border-outline-variant pt-12">
@@ -97,7 +99,7 @@ export default function Contacto() {
                 href="https://www.instagram.com/alte_rstudio/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-xl md:text-2xl font-headline font-bold text-primary hover:italic transition-all"
+                className="block text-xl md:text-2xl font-headline font-bold text-primary transition-all duration-300 hover:italic hover:translate-x-1"
               >
                 @alte_rstudio
               </a>
@@ -116,7 +118,7 @@ export default function Contacto() {
             <p className="text-lg md:text-xl font-light max-w-2xl leading-relaxed italic">
               Descargue nuestro manual corporativo completo. Una guía sobre nuestra filosofía de diseño, tipografía y la evolución consciente del color.
             </p>
-            <a className="group relative inline-block py-4 md:py-6 px-8 md:px-16 border border-primary overflow-hidden" href="/brandbook.pdf" download>
+            <a className="group relative inline-block py-4 md:py-6 px-8 md:px-16 border border-primary overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(58,18,55,0.12)]" href="/brandbook.pdf" download>
               <span className="relative z-10 font-serif font-bold text-base md:text-xl uppercase tracking-widest group-hover:text-surface transition-colors duration-500">Descargar PDF (42MB)</span>
               <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></div>
             </a>
